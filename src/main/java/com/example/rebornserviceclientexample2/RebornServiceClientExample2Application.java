@@ -1,5 +1,6 @@
 package com.example.rebornserviceclientexample2;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -15,8 +16,11 @@ public class RebornServiceClientExample2Application {
 		SpringApplication.run(RebornServiceClientExample2Application.class, args);
 	}
 
+	@Value("${nice.name}")
+	private String niceAppName;
+
 	@GetMapping(path = "/hello")
 	public String hello() {
-		return "Hello I'm the client v2";
+		return "Hello I'm the client v2, with the name: " + niceAppName;
 	}
 }
