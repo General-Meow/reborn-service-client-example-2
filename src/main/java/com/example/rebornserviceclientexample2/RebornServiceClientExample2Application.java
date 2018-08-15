@@ -19,8 +19,11 @@ public class RebornServiceClientExample2Application {
 	@Value("${nice.name}")
 	private String niceAppName;
 
+	@Value("${spring.config.managed.value}")
+	private String value;
+
 	@GetMapping(path = "/hello")
 	public String hello() {
-		return "Hello I'm the client v2, with the name: " + niceAppName;
+		return "Hello I'm the client v2, with the name: " + niceAppName + " also the cloud config value is: " + this.value;
 	}
 }
