@@ -19,7 +19,7 @@ public class RebornServiceClientExample2Application {
 	@Value("${nice.name}")
 	private String niceAppName;
 
-	@Value("${spring.config.managed.value}")
+	@Value("${spring.config.managed.value:uhoh default value}")
 	private String value;
 
 	@GetMapping(path = "/hello")
