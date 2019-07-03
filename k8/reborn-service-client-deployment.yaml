@@ -46,7 +46,7 @@ spec:
           value: http://reborn-service-discovery-service/eureka/
         ports:
           - name: sc-port
-            containerPort: 8081           # open up port 8761
+            containerPort: 7082           # open up port 8761
 #        livenessProbe:
 #          httpGet:
 #            port: sd-port                 # a reference to the port to access the health endpoint, here it points to the declared sd-port

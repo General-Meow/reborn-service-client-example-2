@@ -19,6 +19,6 @@ spec:
     #nodePort: 80           # The port that is bound to the node that is also accessible from the outside, traffic to that port will
                            # will be forwarded to this service. if left out, k8s will automatically assign a value between 30000-32767
     protocol: TCP          # Defines the communication
-    targetPort: 8081       # The port at which incoming requests are forwarded to. This can also be the name of the defined port in the deployment
+    targetPort: 7082       # The port at which incoming requests are forwarded to. This can also be the name of the defined port in the deployment
   selector:                # Object that contains properties for selecting pods
     app: reborn-service-client-2-deployment       # sa-frontend Defines which pods to target, only pods that are labeled with “app: sa-frontend”
